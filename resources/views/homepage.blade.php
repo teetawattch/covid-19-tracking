@@ -103,7 +103,7 @@
             // var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces')
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
-            console.log(data);
+            // console.log(data);
             for (var i = 0; i < data.length; i++) {
                 arrayDate.push(data[i].txn_date)
                 arrayAmount.push(data[i].new_case)
