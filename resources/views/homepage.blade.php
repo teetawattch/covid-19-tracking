@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div style="margin: 1rem 2rem;">
-                    <h2>โควิด - 19 <h5 id="dateUpdate"></h5>
+                    <h2>โควิด - 19 <h5 id="date"></h5><h5 id="dateUpdate"></h5>
                     </h2>
                 </div>
                 <div class="card-body">
@@ -102,6 +102,7 @@
                 document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
                 document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
                 document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+                document.getElementById('date').innerHTML = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
             } else {
                 console.log(data.at(-1));
                 document.getElementById('newcase').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
