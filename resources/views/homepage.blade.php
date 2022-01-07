@@ -5,80 +5,65 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h2>{{ __('โควิด - 19') }} <h5 id="dateUpdate"></h5></h2></div>
+                <div style="margin: 1rem 2rem;">
+                    <h2>โควิด - 19 <h5 id="dateUpdate"></h5>
+                    </h2>
+                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col p-2 ">
-                            <div class="card newcase">
-                                <div class="card-header newcase">
-                                    ผู้ป่วยใหม่
-                                </div>
+                            <div class="card newcase bg-danger p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="newcase"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_case">
-                                <div class="card-header total_case">
-                                    ทั้งหมด
-                                </div>
+                            <div class="card total_case bg-danger p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_case"></span>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div style="margin-bottom: 3rem;">
                             <canvas id="newCaseChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col p-2">
-                            <div class="card recover">
-                                <div class="card-header recover">
-                                    หายกลับบ้าน
-                                </div>
+                            <div class="card recover bg-success p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="recover"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_recover">
-                                <div class="card-header total_recover">
-                                    หายกลับบบ้านทั้งหมด
-                                </div>
+                            <div class="card total_recover bg-success p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_recover"></span>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div style="margin-bottom: 3rem;">
                             <canvas id="recoverChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col p-2">
-                            <div class="card death">
-                                <div class="card-header death">
-                                    เสียชีวิต
-                                </div>
+                            <div class="card death bg-dark p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="death"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_death">
-                                <div class="card-header total_death">
-                                    เสียชีวิตทั้งหมด
-                                </div>
+                            <div class="card total_death bg-dark p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_death"></span>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div style="margin-bottom: 3rem;">
                             <canvas id="deathChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
@@ -114,13 +99,13 @@
                 arrayAllDeath.push(data[i].total_death)
             }
             // console.log(data[i - 1]);
-            document.getElementById('newcase').innerHTML = data[i - 1].new_case
-            document.getElementById('total_case').innerHTML = data[i - 1].total_case
-            document.getElementById('recover').innerHTML = data[i - 1].new_recovered
-            document.getElementById('total_recover').innerHTML = data[i - 1].total_recovered
-            document.getElementById('death').innerHTML = data[i - 1].new_death
-            document.getElementById('total_death').innerHTML = data[i - 1].total_death
-            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  '+data[i-1].txn_date
+            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data[i - 1].new_case
+            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data[i - 1].total_case
+            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data[i - 1].new_recovered
+            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data[i - 1].total_recovered
+            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data[i - 1].new_death
+            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data[i - 1].total_death
+            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data[i - 1].txn_date
 
             //chart
 
