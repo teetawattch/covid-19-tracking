@@ -91,14 +91,24 @@
             // console.log(data);
 
             // console.log(data.at(-1));
-            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
-            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
-            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
-            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
-            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
-            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
-            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
-
+            if (data != null) {
+                document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
+                document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
+                document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
+                document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
+                document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
+                document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
+                document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+            } else {
+                console.log(data.at(-1));
+                document.getElementById('newcase').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('total_case').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('recover').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('total_recover').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('death').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('total_death').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+                document.getElementById('dateUpdate').innerHTML = 'ไม่สามารถแสดงข้อมูลได้ กรุณา Refresh '
+            }
             //chart
             for (var i = 0; i < data.length; i++) {
                 arrayDate.push(data[i].txn_date)
