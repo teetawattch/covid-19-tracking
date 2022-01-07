@@ -6,7 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div style="margin: 1rem 2rem;">
-                    <h2>โควิด - 19 <h5 id="date"></h5><h5 id="dateUpdate"></h5>
+                    <h2>โควิด - 19 <h5 id="date"></h5>
+                        <h5 id="dateUpdate"></h5>
                     </h2>
                 </div>
                 <div class="card-body">
@@ -168,6 +169,9 @@
                             display: true,
                             labels: {
                                 color: 'rgb(255, 99, 132)',
+                                font: {
+                                    family: "'Noto Sans Thai', sans-serif"
+                                }
                             },
                             position: 'right'
                         }
@@ -233,7 +237,10 @@
                         legend: {
                             display: true,
                             labels: {
-                                color: 'rgb(0, 255, 111)'
+                                color: 'rgb(0, 255, 111)',
+                                font: {
+                                    family: "'Noto Sans Thai', sans-serif"
+                                }
                             },
                             position: 'right'
                         }
@@ -299,7 +306,10 @@
                         legend: {
                             display: true,
                             labels: {
-                                color: 'rgb(128, 128, 128)'
+                                color: 'rgb(128, 128, 128)',
+                                font: {
+                                    family: "'Noto Sans Thai', sans-serif"
+                                }
                             },
                             position: 'right'
                         }
