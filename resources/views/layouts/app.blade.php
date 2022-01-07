@@ -81,5 +81,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('localScript')
 </body>
 </html>
