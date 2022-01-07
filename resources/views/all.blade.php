@@ -7,7 +7,7 @@
             ภาพรวมทั้งหมด
         </h3>
         <br>
-        <canvas id="AllChart" height="500rem" width="500rem" style="margin:1rem auto;"></canvas>
+        <canvas id="AllChart" style="width: 30rem;margin:1rem auto;position:relative;"></canvas>
     </div>
 
     <h4 class="p-3">ข้อมูลย้อนหลัง 30 วัน</h4>
@@ -23,27 +23,27 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <canvas id="newCaseChart" style="max-width: 20rem;"></canvas>
+        <div class="col-4">
+            <canvas id="newCaseChart" style="max-width: 25rem;position:relative;"></canvas>
         </div>
-        <div class="col">
+        <div class="col-4">
 
-            <canvas id="recoverChart" style="max-width: 20rem;"></canvas>
+            <canvas id="recoverChart" style="max-width: 25rem;position:relative;"></canvas>
         </div>
-        <div class="col">
+        <div class="col-4">
 
-            <canvas id="deathChart" style="max-width: 20rem;"></canvas>
+            <canvas id="deathChart" style="max-width: 25rem;position:relative;"></canvas>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <canvas id="newCaseChartTotal" style="max-width: 20rem;"></canvas>
+        <div class="col-4">
+            <canvas id="newCaseChartTotal" style="max-width: 25rem;position:relative;"></canvas>
         </div>
-        <div class="col">
-            <canvas id="recoverChartTotal" style="max-width: 20rem;"></canvas>
+        <div class="col-4">
+            <canvas id="recoverChartTotal" style="max-width: 25rem;position:relative;"></canvas>
         </div>
-        <div class="col">
-            <canvas id="deathChartTotal" style="max-width: 20rem;"></canvas>
+        <div class="col-4">
+            <canvas id="deathChartTotal" style="max-width: 25rem;position:relative;"></canvas>
         </div>
     </div>
 </div>
@@ -123,21 +123,7 @@
                             position: 'right'
                         }
                     },
-                    // scales: {
-                    //     y: {
-                    //         beginAtZero: true,
-                    //         grid: {
-                    //             display: false
-                    //         }
-                    //     },
-                    //     x: {
-                    //         grid: {
-                    //             display: false
-                    //         }
-                    //     },
-
-
-                    // }
+                    responsive:true
                 }
             });
             var ctx = document.getElementById("newCaseChart").getContext("2d");
@@ -194,7 +180,9 @@
                         },
 
 
-                    }
+                    },
+                    responsive:true,
+                    maintainAspectRatio:false
                 }
             });
             var ctx = document.getElementById("recoverChart").getContext("2d");
@@ -251,7 +239,9 @@
                         },
 
 
-                    }
+                    },
+                    responsive:true,
+                    maintainAspectRatio:false
                 }
             });
             var ctx = document.getElementById("deathChart").getContext("2d");
@@ -308,7 +298,9 @@
                         },
 
 
-                    }
+                    },
+                    responsive:true,
+                    maintainAspectRatio:false
                 }
             });
             var ctx = document.getElementById("newCaseChartTotal").getContext("2d");
@@ -365,7 +357,9 @@
                         },
 
 
-                    }
+                    },
+                    responsive:true,
+                    maintainAspectRatio:false
                 }
             });
             var ctx = document.getElementById("recoverChartTotal").getContext("2d");
@@ -423,7 +417,9 @@
 
 
                     }
-                }
+                },
+                    responsive:true,
+                    maintainAspectRatio:false
             });
             var ctx = document.getElementById("deathChartTotal").getContext("2d");
             var myChart = new Chart(ctx, {
@@ -479,7 +475,9 @@
                         },
 
 
-                    }
+                    },
+                    responsive:true,
+                    maintainAspectRatio:false
                 }
             });
         } catch (error) {
