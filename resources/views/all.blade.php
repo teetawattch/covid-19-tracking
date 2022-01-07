@@ -123,6 +123,11 @@
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
 
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayAmount.push(data[i].new_case)
+            }
+
             var ctx = document.getElementById("newCaseChart").getContext("2d");
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -186,6 +191,11 @@
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
+
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayAllAmount.push(data[i].total_case)
+            }
 
             var ctx = document.getElementById("newCaseChartTotal").getContext("2d");
             var myChart = new Chart(ctx, {
@@ -251,6 +261,11 @@
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
 
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayRecover.push(data[i].new_recovered)
+            }
+
             var ctx = document.getElementById("recoverChart").getContext("2d");
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -314,6 +329,11 @@
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
+
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayAllRecover.push(data[i].total_recovered)
+            }
 
             var ctx = document.getElementById("recoverChartTotal").getContext("2d");
             var myChart = new Chart(ctx, {
@@ -379,6 +399,11 @@
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
 
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayDeath.push(data[i].new_death)
+            }
+
             var ctx = document.getElementById("deathChart").getContext("2d");
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -442,6 +467,11 @@
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
+
+            for (var i = 0; i < data.length; i++) {
+                arrayDate.push(data[i].txn_date)
+                arrayAllDeath.push(data[i].total_death)
+            }
 
             var ctx = document.getElementById("deathChartTotal").getContext("2d");
             var myChart = new Chart(ctx, {
