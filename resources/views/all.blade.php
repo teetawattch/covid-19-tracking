@@ -59,7 +59,8 @@
     var arrayAllRecover = []
     var arrayDeath = []
     var arrayAllDeath = []
-    getData()
+    // getData()
+    totalChart()
     async function totalChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -116,6 +117,7 @@
             console.log(error);
         }
     }
+    newcaseChart()
     async function newcaseChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -179,6 +181,7 @@
             console.log(error);
         }
     }
+    totalnewcaseChart()
     async function totalnewcaseChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -242,6 +245,7 @@
             console.log(error);
         }
     }
+    recoveredChart()
     async function recoveredChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -305,6 +309,7 @@
             console.log(error);
         }
     }
+    totalrecoveredChart()
     async function totalrecoveredChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -368,7 +373,7 @@
             console.log(error);
         }
     }
-
+    deathChart()
     async function deathChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
@@ -432,7 +437,7 @@
             console.log(error);
         }
     }
-
+    totaldeathChart()
     async function totaldeathChart() {
         try {
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
