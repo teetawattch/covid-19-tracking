@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('homepage');
-});
+})->name('homepage');
+Route::get('/all', function () {
+    return view('all');
+})->name('all');
 
 Auth::routes();
 
