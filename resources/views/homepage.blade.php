@@ -91,7 +91,7 @@
             // console.log(data);
 
             // console.log(data.at(-1));
-            if (data != null) {
+            if (data.length !== 0) {
                 document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
                 document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
                 document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
