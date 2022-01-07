@@ -499,24 +499,25 @@
             console.log(error);
         }
     }
-    getData()
-    async function getData() {
-        try {
-            // var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces')
-            var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
-            var data = await res.json()
-            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
-            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
-            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
-            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
-            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
-            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
-            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
-            document.getElementById('date').innerHTML = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
-        } catch (error) {
-            console.log(error);
-        }
-    }
 </script>
-
+<script>
+    getData()
+        async function getData() {
+            try {
+                // var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces')
+                var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
+                var data = await res.json()
+                document.getElementById('newcase').innerText = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
+                document.getElementById('total_case').innerText = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
+                document.getElementById('recover').innerText = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
+                document.getElementById('total_recover').innerText = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
+                document.getElementById('death').innerText = 'เสียชีวิต : ' + data.at(-1).new_death
+                document.getElementById('total_death').innerText = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
+                document.getElementById('dateUpdate').innerText = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+                document.getElementById('date').innerText = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
+            } catch (error) {
+                console.log(error);
+            }
+        }
+</script>
 @endsection
