@@ -68,7 +68,7 @@
 
             var ctx = document.getElementById("AllChart").getContext("2d");
             var myChart = new Chart(ctx, {
-                type: 'doughnut',
+                type: 'pie',
                 data: {
                     labels: ['ผู้ป่วยรายใหม่', 'หายกลับบ้าน', 'เสียชีวิต'],
                     datasets: [{
