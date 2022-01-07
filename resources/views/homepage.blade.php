@@ -89,6 +89,17 @@
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
             // console.log(data);
+
+            // console.log(data.at(-1));
+            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
+            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
+            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
+            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
+            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
+            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
+            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+
+            //chart
             for (var i = 0; i < data.length; i++) {
                 arrayDate.push(data[i].txn_date)
                 arrayAmount.push(data[i].new_case)
@@ -98,17 +109,6 @@
                 arrayDeath.push(data[i].new_death)
                 arrayAllDeath.push(data[i].total_death)
             }
-            // console.log(data[i - 1]);
-            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data[i - 1].new_case
-            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data[i - 1].total_case
-            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data[i - 1].new_recovered
-            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data[i - 1].total_recovered
-            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data[i - 1].new_death
-            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data[i - 1].total_death
-            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data[i - 1].txn_date
-
-            //chart
-
             var ctx = document.getElementById("newCaseChart").getContext("2d");
             var myChart = new Chart(ctx, {
                 type: 'line',
