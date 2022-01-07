@@ -9,37 +9,47 @@
         <br>
         <canvas id="AllChart" height="500rem" width="500rem" style="margin:1rem auto;"></canvas>
     </div>
+
+    <h4 class="p-3">ข้อมูลย้อนหลัง 30 วัน</h4>
     <div class="row">
-        <h4 class="p-3">ข้อมูลย้อนหลัง 30 วัน</h4>
         <div class="col">
             <h5 class="p-3">ผู้ป่วยรายใหม่</h5>
-            <canvas id="newCaseChart" style="max-width: 550px;"></canvas>
         </div>
         <div class="col">
             <h5 class="p-3">หายกลับบ้าน</h5>
-            <canvas id="recoverChart" style="max-width: 550px;"></canvas>
         </div>
         <div class="col">
             <h5 class="p-3">เสียชีวิต</h5>
-            <canvas id="deathChart" style="max-width: 550px;"></canvas>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <canvas id="newCaseChartTotal" style="max-width: 550px;"></canvas>
+            <canvas id="newCaseChart" style="max-width: 20rem;"></canvas>
         </div>
         <div class="col">
-            <canvas id="recoverChartTotal" style="max-width: 550px;"></canvas>
+
+            <canvas id="recoverChart" style="max-width: 20rem;"></canvas>
         </div>
         <div class="col">
-            <canvas id="deathChartTotal" style="max-width: 550px;"></canvas>
+
+            <canvas id="deathChart" style="max-width: 20rem;"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <canvas id="newCaseChartTotal" style="max-width: 20rem;"></canvas>
+        </div>
+        <div class="col">
+            <canvas id="recoverChartTotal" style="max-width: 20rem;"></canvas>
+        </div>
+        <div class="col">
+            <canvas id="deathChartTotal" style="max-width: 20rem;"></canvas>
         </div>
     </div>
 </div>
 @endsection
 
 @section('localScript')
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('js/chartjs/chart.js') }}"></script>
 <script type="text/javascript">
     getData()
