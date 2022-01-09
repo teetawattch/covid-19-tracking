@@ -13,14 +13,14 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col p-2 ">
-                            <div class="card newcase bg-danger p-3 text-white">
+                            <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="newcase"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_case bg-danger p-3 text-white">
+                            <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_case"></span>
                                 </div>
@@ -32,14 +32,14 @@
                     </div>
                     <div class="row">
                         <div class="col p-2">
-                            <div class="card recover bg-success p-3 text-white">
+                            <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="recover"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_recover bg-success p-3 text-white">
+                            <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_recover"></span>
                                 </div>
@@ -51,14 +51,14 @@
                     </div>
                     <div class="row">
                         <div class="col p-2">
-                            <div class="card death bg-dark p-3 text-white">
+                            <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="death"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
-                            <div class="card total_death bg-dark p-3 text-white">
+                            <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
                                     <span id="total_death"></span>
                                 </div>
@@ -120,10 +120,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayAmount.slice(-31),
+                        data: arrayAmount.slice(-30),
                         backgroundColor: [
                             'rgb(255, 47, 61)',
                         ],
@@ -189,10 +189,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllAmount.slice(-31),
+                        data: arrayAllAmount.slice(-30),
                         backgroundColor: [
                             'rgb(153, 0, 0)',
                         ],
@@ -258,10 +258,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayRecover.slice(-31),
+                        data: arrayRecover.slice(-30),
                         backgroundColor: [
                             'rgb(0, 255, 111)'
                         ],
@@ -327,10 +327,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllRecover.slice(-31),
+                        data: arrayAllRecover.slice(-30),
                         backgroundColor: [
                             'rgb(0, 204, 102)'
                         ],
@@ -396,10 +396,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayDeath.slice(-31),
+                        data: arrayDeath.slice(-30),
                         backgroundColor: [
                             'rgb(128, 128, 128)'
                         ],
@@ -465,10 +465,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-30),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllDeath.slice(-31),
+                        data: arrayAllDeath.slice(-30),
                         backgroundColor: [
                             'rgb(64, 64, 64)'
                         ],

@@ -10,7 +10,7 @@
         <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
     </div>
 
-    <h4 class="p-3">ข้อมูลย้อนหลัง 30 วัน</h4>
+    <h4 class="p-3">ข้อมูลย้อนหลัง 7 วัน</h4>
     <div class="row">
         <div class="col">
             <h5 class="p-3">ผู้ป่วยรายใหม่</h5>
@@ -68,7 +68,7 @@
 
             var ctx = document.getElementById("AllChart").getContext("2d");
             var myChart = new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: ['ผู้ป่วยรายใหม่', 'หายกลับบ้าน', 'เสียชีวิต'],
                     datasets: [{
@@ -132,10 +132,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayAmount.slice(-31),
+                        data: arrayAmount.slice(-7),
                         backgroundColor: [
                             'rgb(255, 47, 61)',
                         ],
@@ -201,10 +201,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllAmount.slice(-31),
+                        data: arrayAllAmount.slice(-7),
                         backgroundColor: [
                             'rgb(153, 0, 0)',
                         ],
@@ -270,10 +270,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayRecover.slice(-31),
+                        data: arrayRecover.slice(-7),
                         backgroundColor: [
                             'rgb(0, 255, 111)'
                         ],
@@ -339,10 +339,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllRecover.slice(-31),
+                        data: arrayAllRecover.slice(-7),
                         backgroundColor: [
                             'rgb(0, 204, 102)'
                         ],
@@ -408,10 +408,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนวันนี้ ',
-                        data: arrayDeath.slice(-31),
+                        data: arrayDeath.slice(-7),
                         backgroundColor: [
                             'rgb(128, 128, 128)'
                         ],
@@ -477,10 +477,10 @@
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: arrayDate.slice(-31),
+                    labels: arrayDate.slice(-7),
                     datasets: [{
                         label: 'จำนวนสะสม ',
-                        data: arrayAllDeath.slice(-31),
+                        data: arrayAllDeath.slice(-7),
                         backgroundColor: [
                             'rgb(64, 64, 64)'
                         ],
