@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div style="margin: 1rem 2rem;">
-                    <h2>โควิด - 19 <p><h5 id="date"></h5></p>
-                        <p><h5 id="dateUpdate"></h5></p>
+                    <h2>โควิด - 19 <div><h5 id="date"></h5></div>
+                        <div><h5 id="dateUpdate"></h5></div>
                     </h2>
                 </div>
                 <div class="card-body">
@@ -15,14 +15,14 @@
                         <div class="col p-2 ">
                             <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="newcase"></p>
+                                    <div id="newcase"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="total_case"></p>
+                                    <div id="total_case"></div>
                                 </div>
                             </div>
                         </div>
@@ -34,14 +34,14 @@
                         <div class="col p-2">
                             <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="recover"></p>
+                                    <div id="recover"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="total_recover"></p>
+                                    <div id="total_recover"></div>
                                 </div>
                             </div>
                         </div>
@@ -53,14 +53,14 @@
                         <div class="col p-2">
                             <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="death"></p>
+                                    <div id="death"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
-                                    <p id="total_death"></p>
+                                    <div id="total_death"></div>
                                 </div>
                             </div>
                         </div>
@@ -91,14 +91,14 @@
             // var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces')
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
-            document.getElementById('newcase').innerText = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
-            document.getElementById('total_case').innerText = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
-            document.getElementById('recover').innerText = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
-            document.getElementById('total_recover').innerText = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
-            document.getElementById('death').innerText = 'เสียชีวิต : ' + data.at(-1).new_death
-            document.getElementById('total_death').innerText = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
-            document.getElementById('dateUpdate').innerText = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
-            document.getElementById('date').innerText = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
+            document.getElementById('newcase').innerHTML = "<div>ผู้ป่วยรายใหม่ :  " + data.at(-1).new_case + "</div>"
+            document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
+            document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
+            document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
+            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
+            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
+            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+            document.getElementById('date').innerHTML = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
         } catch (error) {
             console.log(error);
         }
