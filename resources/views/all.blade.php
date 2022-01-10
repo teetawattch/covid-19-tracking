@@ -8,7 +8,7 @@
         </h3>
     </div>
     <div>
-        <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
+        <canvas id="AllChart" style="margin: 1rem auto;height:15vh;width:30vw;"></canvas>
     </div>
     <h4 class="p-3">ข้อมูลย้อนหลัง 7 วัน</h4>
     <div class="row">

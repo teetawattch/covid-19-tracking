@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div style="margin: 1rem 2rem;">
+            <!-- <div class="card"> -->
+                <div style="margin: 1rem 0;">
                     <h2>โควิด - 19 </h2>
                 </div>
                 <div style="margin: 0 2rem;">
@@ -14,7 +14,7 @@
                 <div style="margin: 0 2rem;">
                     <h5 id="dateUpdate"></h5>
                 </div>
-                <div class="card-body">
+                <!-- <div class="card-body"> -->
                     <div class="row">
                         <div class="col p-2 ">
                             <div class="card bg-danger p-3 text-white">
@@ -72,8 +72,8 @@
                             <canvas id="deathChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
 </div>
