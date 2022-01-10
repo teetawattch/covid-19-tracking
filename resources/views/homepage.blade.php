@@ -17,11 +17,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col p-2 ">
-                            <div class="card bg-danger p-3 text-white">
-                                <div class="card-body text-center">
                                     <div id="newcase"></div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-danger p-3 text-white">
@@ -95,7 +91,7 @@
             // var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces')
             var res = await fetch('https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all')
             var data = await res.json()
-            document.getElementById('newcase').innerHTML = 'ผู้ป่วยรายใหม่ : ' + data.at(-1).new_case
+            document.getElementById('newcase').innerHTML = "<div class='bg-danger p-3 text-white text-center'>ผู้ป่วยรายใหม่ : "+ data.at(-1).new_case +"</div>" 
             document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
             document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
             document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
