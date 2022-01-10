@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div style="margin: 1rem 2rem;">
-                    <h2>โควิด - 19 <h5 id="date"></h5>
-                        <h5 id="dateUpdate"></h5>
+                    <h2>โควิด - 19 <div><h5 id="date"></h5></div>
+                        <div><h5 id="dateUpdate"></h5></div>
                     </h2>
                 </div>
                 <div class="card-body">
@@ -15,14 +15,14 @@
                         <div class="col p-2 ">
                             <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="newcase"></span>
+                                    <div id="newcase"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-danger p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="total_case"></span>
+                                    <div id="total_case"></div>
                                 </div>
                             </div>
                         </div>
@@ -34,14 +34,14 @@
                         <div class="col p-2">
                             <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="recover"></span>
+                                    <div id="recover"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-success p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="total_recover"></span>
+                                    <div id="total_recover"></div>
                                 </div>
                             </div>
                         </div>
@@ -53,14 +53,14 @@
                         <div class="col p-2">
                             <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="death"></span>
+                                    <div id="death"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col p-2">
                             <div class="card bg-dark p-3 text-white">
                                 <div class="card-body text-center">
-                                    <span id="total_death"></span>
+                                    <div id="total_death"></div>
                                 </div>
                             </div>
                         </div>

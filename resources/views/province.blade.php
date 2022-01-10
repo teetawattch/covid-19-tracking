@@ -41,13 +41,13 @@
 
             // showDate.innerText = data[0].update_date
             for (var i = 0; i < data.length; i++) {
-                if(data[i].total_case > 30000){
+                if (data[i].total_case > 30000) {
                     divData.innerHTML += "<div class='card text-center bg-danger text-white pt-3 pb-3'><div class='row'><div class='col'>" + data[i].province + " </div> <div class='col'>" + data[i].new_case + "</div><div class='col'>" + data[i].total_case + "</div><div class='col'>" + data[i].new_death + "</div><div class='col'>" + data[i].total_death + "</div></div></div>"
-                }else if(data[i].total_case > 10000){
+                } else if (data[i].total_case > 10000) {
                     divData.innerHTML += "<div class='card text-center bg-warning text-white pt-3 pb-3'><div class='row'><div class='col'>" + data[i].province + " </div> <div class='col'>" + data[i].new_case + "</div><div class='col'>" + data[i].total_case + "</div><div class='col'>" + data[i].new_death + "</div><div class='col'>" + data[i].total_death + "</div></div></div>"
-                }else if(data[i].total_case > 5000){
+                } else if (data[i].total_case > 5000) {
                     divData.innerHTML += "<div class='card text-center bg-success text-white pt-3 pb-3'><div class='row'><div class='col'>" + data[i].province + " </div> <div class='col'>" + data[i].new_case + "</div><div class='col'>" + data[i].total_case + "</div><div class='col'>" + data[i].new_death + "</div><div class='col'>" + data[i].total_death + "</div></div></div>"
-                }else{
+                } else {
                     divData.innerHTML += "<div class='card text-center bg-secondary text-white pt-3 pb-3'><div class='row'><div class='col'>" + data[i].province + " </div> <div class='col'>" + data[i].new_case + "</div><div class='col'>" + data[i].total_case + "</div><div class='col'>" + data[i].new_death + "</div><div class='col'>" + data[i].total_death + "</div></div></div>"
                 }
             }

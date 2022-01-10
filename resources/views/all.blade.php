@@ -7,7 +7,9 @@
             ภาพรวมทั้งหมด
         </h3>
         <br>
-        <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
+        <div>
+            <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
+        </div>
     </div>
 
     <h4 class="p-3">ข้อมูลย้อนหลัง 7 วัน</h4>
