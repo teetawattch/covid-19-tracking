@@ -6,12 +6,11 @@
         <h3>
             ภาพรวมทั้งหมด
         </h3>
-        <br>
-        <div>
-            <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
-        </div>
-    </div>
 
+    </div>
+    <div style="border-bottom: 1px solid gray;">
+        <canvas id="AllChart" style="margin: 1rem auto;position: relative;height:15vh;width:30vw;"></canvas>
+    </div>
     <h4 class="p-3">ข้อมูลย้อนหลัง 7 วัน</h4>
     <div class="row">
         <div class="col">
@@ -33,7 +32,6 @@
             <canvas id="recoverChart" style="max-width: auto;position:relative;"></canvas>
         </div>
         <div class="col-4">
-
             <canvas id="deathChart" style="max-width: auto;position:relative;"></canvas>
         </div>
     </div>
