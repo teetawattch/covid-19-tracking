@@ -5,74 +5,74 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <!-- <div class="card"> -->
-            <div style="margin: 1rem 0;">
-                <h2>โควิด - 19 </h2>
-            </div>
-            <div style="margin: 0 2rem;">
-                <h5 id="date"></h5>
-            </div>
-            <div style="margin: 0 2rem;">
-                <h5 id="dateUpdate"></h5>
-            </div>
-            <!-- <div class="card-body"> -->
-            <div class="row">
-                <div class="col p-2 ">
-                    <div class="card bg-danger p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="newcase"></div>
+                <div style="margin: 1rem 0;">
+                    <h2>โควิด - 19 </h2>
+                </div>
+                <div style="margin: 0 2rem;">
+                    <h5 id="date"></h5>
+                </div>
+                <div style="margin: 0 2rem;">
+                    <h5 id="dateUpdate"></h5>
+                </div>
+                <!-- <div class="card-body"> -->
+                    <div class="row">
+                        <div class="col p-2 ">
+                            <div class="card bg-danger p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="newcase"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card bg-danger p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="total_case"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 3rem;">
+                            <canvas id="newCaseChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card bg-danger p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="total_case"></div>
+                    <div class="row">
+                        <div class="col p-2">
+                            <div class="card bg-success p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="recover"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card bg-success p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="total_recover"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 3rem;">
+                            <canvas id="recoverChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
-                </div>
-                <div style="margin-bottom: 3rem;">
-                    <canvas id="newCaseChart" style="max-width: 850px;padding:1rem;"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col p-2">
-                    <div class="card bg-success p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="recover"></div>
+                    <div class="row">
+                        <div class="col p-2">
+                            <div class="card bg-dark p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="death"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card bg-dark p-3 text-white">
+                                <div class="card-body text-center">
+                                    <div id="total_death"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 3rem;">
+                            <canvas id="deathChart" style="max-width: 850px;padding:1rem;"></canvas>
                         </div>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card bg-success p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="total_recover"></div>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 3rem;">
-                    <canvas id="recoverChart" style="max-width: 850px;padding:1rem;"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col p-2">
-                    <div class="card bg-dark p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="death"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card bg-dark p-3 text-white">
-                        <div class="card-body text-center">
-                            <div id="total_death"></div>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 3rem;">
-                    <canvas id="deathChart" style="max-width: 850px;padding:1rem;"></canvas>
-                </div>
-            </div>
-            <!-- </div> -->
+                <!-- </div> -->
             <!-- </div> -->
         </div>
     </div>
@@ -99,10 +99,10 @@
             document.getElementById('total_case').innerHTML = 'ผู้ป่วยทั้งหมด : ' + data.at(-1).total_case
             document.getElementById('recover').innerHTML = 'หายกลับบ้าน : ' + data.at(-1).new_recovered
             document.getElementById('total_recover').innerHTML = 'หายกลับบ้านทั้งหมด : ' + data.at(-1).total_recovered
-            document.getElementById('death').innerHTML = "<div class='text-center'>เสียชีวิต : " + data.at(-1).new_death + "</div>"
-            document.getElementById('total_death').innerHTML = "<div class='text-center'>เสียชีวิตทั้งหมด : " + data.at(-1).total_death + "</div>"
-            document.getElementById('dateUpdate').innerHTML = "<div class='text-center'>ข้อมูลล่าสุดวันที่ : " + data.at(-1).txn_date + "</div>"
-            document.getElementById('date').innerHTML = "<div class='text-center'>ข้อมูลตั้งแต่วันที่ :  " + data.at(0).txn_date + ' - ' + data.at(-1).txn_date + "</div>"
+            document.getElementById('death').innerHTML = 'เสียชีวิต : ' + data.at(-1).new_death
+            document.getElementById('total_death').innerHTML = 'เสียชีวิตทั้งหมด : ' + data.at(-1).total_death
+            document.getElementById('dateUpdate').innerHTML = ' ข้อมูลล่าสุดวันที่ :  ' + data.at(-1).txn_date
+            document.getElementById('date').innerHTML = 'ข้อมูลตั้งแต่วันที่ : ' + data.at(0).txn_date + ' - ' + data.at(-1).txn_date
         } catch (error) {
             console.log(error);
         }
