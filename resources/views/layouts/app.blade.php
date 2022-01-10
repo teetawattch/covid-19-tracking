@@ -43,6 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('all') }}">ภาพรวม</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('province') }}">แยกตามจังหวัด</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

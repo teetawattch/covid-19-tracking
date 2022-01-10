@@ -78,6 +78,13 @@
 @section('localScript')
 <script type="text/javascript" src="{{ asset('js/chartjs/chart.js') }}"></script>
 <script type="text/javascript">
+    var arrayDate = []
+    var arrayAmount = []
+    var arrayAllAmount = []
+    var arrayRecover = []
+    var arrayAllRecover = []
+    var arrayDeath = []
+    var arrayAllDeath = []
     getData()
     async function getData() {
         try {
@@ -96,15 +103,6 @@
             console.log(error);
         }
     }
-</script>
-<script type="text/javascript">
-    var arrayDate = []
-    var arrayAmount = []
-    var arrayAllAmount = []
-    var arrayRecover = []
-    var arrayAllRecover = []
-    var arrayDeath = []
-    var arrayAllDeath = []
     newcaseChart()
     async function newcaseChart() {
         try {

@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/all', function () {
     return view('all');
 })->name('all');
+Route::get('/province', function() {
+    return view('province');
+})->name('province');
 
 Auth::routes();
 
